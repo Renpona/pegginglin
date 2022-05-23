@@ -1,5 +1,5 @@
 using BepInEx;
-using HarmonyLib;
+using Peglin.Achievements;
 
 namespace PeglinCore
 {
@@ -9,6 +9,7 @@ namespace PeglinCore
     {
         private void Awake()
         {
+            AchievementManager.AchievementsOn = false;
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
         }
     }
