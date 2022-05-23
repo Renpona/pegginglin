@@ -2,3 +2,5 @@
 obj
 bin
 gamelibs
+dist
+build

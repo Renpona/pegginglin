@@ -1,0 +1,24 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "PeglinCore"
+name = "PeglinCore"
+versionNumber = "1.0.0"
+description = "Core mod for Peglin"
+websiteUrl = "https://github.com/Peglin-Modding/PeglinCore"
+containsNsfwContent = false
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "./dist"
+
+[[build.copy]]
+source = "./dist"
+target = ""
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["peglin"]
+categories = []
