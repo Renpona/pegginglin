@@ -1,4 +1,5 @@
 using BepInEx;
+using HarmonyLib;
 using Peglin.Achievements;
 
 namespace PeglinCore
@@ -7,10 +8,19 @@ namespace PeglinCore
     [BepInProcess("Peglin.exe")]
     public class Plugin : BaseUnityPlugin
     {
+        private readonly Harmony harmony = new Harmony(PluginInfo.PLUGIN_GUID);
+
         private void Awake()
         {
             AchievementManager.AchievementsOn = false;
+            harmony.PatchAll();
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
+        }
+
+        [HarmonyPatch(typeof(PeglinUI.LoadoutManager.LoadoutManager), "SetupDataForNewGame")]
+        [HarmonyPostfix]
+        static private void PatchSetupDataForNewGame() {
+            AchievementManager.AchievementsOn = false;
         }
     }
 }
