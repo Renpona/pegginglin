@@ -6,13 +6,13 @@ namespace PeglinCore
 {
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
     [BepInProcess("Peglin.exe")]
+    [HarmonyPatch]
     public class Plugin : BaseUnityPlugin
     {
         private readonly Harmony harmony = new Harmony(PluginInfo.PLUGIN_GUID);
 
         private void Awake()
         {
-            AchievementManager.AchievementsOn = false;
             harmony.PatchAll();
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
         }
