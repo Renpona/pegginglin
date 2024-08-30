@@ -1,23 +1,56 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net46</TargetFramework>
-        <AssemblyName>PeglinCore</AssemblyName>
-        <BepInExPluginGuid>peglin.core.Core</BepInExPluginGuid>
-        <Description>Core mod for Peglin</Description>
-        <Version>1.1.0</Version>
+        <TargetFramework>net462</TargetFramework>
+        <AssemblyName>Pegginglin</AssemblyName>
+        <BepInExPluginGuid>com.nonpolynomial.Pegginglin</BepInExPluginGuid>
+        <Description>Buttplug.io mod for Peglin</Description>
+        <Version>1.0.0</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>9.0</LangVersion>
+        <BaseOutputPath>D:\SteamLibrary\steamapps\common\Peglin\BepInEx\plugins</BaseOutputPath>
+      <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
-        <PackageReference Include="BepInEx.Core" Version="5.4.19" />
-        <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
-        <PackageReference Include="Peglin.GameLibs" Version="0.7.45-r.0" />
+        <PackageReference Include="BepInEx.Core" Version="5.4.21" />
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="1.1.0" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="0Harmony">
+        <HintPath>D:\SteamLibrary\steamapps\common\Peglin\BepInEx\core\0Harmony.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>D:\SteamLibrary\steamapps\common\Peglin\Peglin_Data\Managed\Assembly-CSharp.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
+      <Reference Include="BepInEx">
+        <HintPath>D:\SteamLibrary\steamapps\common\Peglin\BepInEx\core\BepInEx.dll</HintPath>
+      </Reference>
+      <Reference Include="Buttplug">
+        <HintPath>..\buttplug-csharp\Buttplug.Client.Connectors.WebsocketConnector\bin\Release\net462\Buttplug.dll</HintPath>
+      </Reference>
+      <Reference Include="Buttplug.Client.Connectors.WebsocketConnector">
+        <HintPath>..\buttplug-csharp\Buttplug.Client.Connectors.WebsocketConnector\bin\Release\net462\Buttplug.Client.Connectors.WebsocketConnector.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine">
+        <HintPath>D:\SteamLibrary\steamapps\common\Peglin\Peglin_Data\Managed\UnityEngine.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
+      <Reference Include="UnityEngine.CoreModule">
+        <HintPath>D:\SteamLibrary\steamapps\common\Peglin\Peglin_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Properties\" />
     </ItemGroup>
 </Project>
