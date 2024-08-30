@@ -2,11 +2,11 @@
 schemaVersion = "0.0.1"
 
 [package]
-namespace = "PeglinCore"
-name = "PeglinCore"
-versionNumber = "1.1.0"
-description = "Core mod for Peglin"
-websiteUrl = "https://github.com/Peglin-Modding/PeglinCore"
+namespace = "Pegginglin"
+name = "Pegginglin"
+versionNumber = "1.0.0"
+description = "Buttplug.io mod for Peglin"
+websiteUrl = "https://github.com/qdot/pegginglin"
 containsNsfwContent = false
 
 [build]

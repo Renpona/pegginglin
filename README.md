@@ -1,5 +1,7 @@
-# Peglin Core
-This is a core plugin for Peglin. It is always included as a dependency in Thunderstore,
-so it should be kept as small as possible.
+# Pegginglin - Buttplug.io mod for Peglin
 
-Currently all it does is set a flag to let the base game know that there are mods enabled.
+This is a simple BepInEx mod for Peglin with the following features:
+
+- Runs vibrator for 100ms whenever a peg is hit
+
+
