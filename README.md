@@ -29,3 +29,14 @@ Note that the project is currently set up against the developer's local configur
 Peglin packages are currently out of date.
 
 Due to incompatibilities in the Nuget Buttplug packages and the version of .Net Peglin uses, building against the Buttplug C# library will require a local clone of the [buttplug-csharp repo](https://github.com/buttplugio/buttplug-csharp), with the `no-tuple` branch checked out.
+
+## ChangeLog
+
+- v0.0.3
+  - README updates
+- v0.0.2
+  - Update release to try to fix Thunderstore rejection (didn't work)
+- v0.0.1
+  - First release
+  - Minimal vibration functionality
+  - Just seeing if this will even work for anyone else
