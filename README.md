@@ -4,9 +4,18 @@ This is a simple BepInEx mod for Peglin with the following features:
 
 - Runs vibrator for 100ms whenever a peg is hit
 
+## How to install
+
+- Download from [Thunderstore](https://thunderstore.io/c/peglin/p/nonpolynomial/Pegginglin/) using r2modman
+- Manual install if that doesn't work
+  - Download [BepInEx v5.4.23.2](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.23.2) for your
+    specific architecture (most likely win_x64)
+  - Unzip the BepInEx directory to your Peglin install directory
+  - Download latest Pegginglin release from [github](https://github.com/qdot/pegginglin/releases)
+  - Unzip into `plugins` directory in the `BepInEx` directory of your Peglin install
+
 ## How to use
 
-- Install Mod manually or using r2modman
 - Start [Intiface Central](https://intiface.com/central)
 - Start Peglin
 - Soon after install, Intiface Central should show "Pegginglin" as connected
