@@ -116,7 +116,7 @@ namespace PeglinCore
                     break;
                 case Peg.PegType.CRIT:      // Yellow crit peg
                     Log.LogDebug("CRIT");
-                    RunVibrate(0.8);
+                    RunVibrate(0.9);
                     break;
                 case Peg.PegType.DULL:      // I think these are the gray pegs that don't pop on hit, from certain enemies
                     Log.LogDebug("DULL");
@@ -128,21 +128,21 @@ namespace PeglinCore
                     break;
                 case Peg.PegType.GOLD:      // I think this only applies to the special gold pegs, not the regular ones
                     Log.LogDebug("GOLD");
-                    RunVibrate(0.8);
+                    RunVibrate(0.7);
                     break;
                 case Peg.PegType.BOMB:
                     if (peg.GetType() == typeof(Bomb))
                     {
                         Bomb bomb = (Bomb)peg;
-                        if (bomb.detonatedThisTurn)     // Not sure this actually works now, needs further debugging
+                        if (bomb.detonatedThisTurn)     // Pretty sure this doesn't actually work and always goes to the "first hit" branch
                         {
                             Log.LogDebug("Bomb EXPLODE");
-                            RunVibrate(0.8);
+                            RunVibrate(1.0);
                         }
                         else
                         {
                             Log.LogDebug("Bomb First Hit");
-                            RunVibrate(0.6);
+                            RunVibrate(0.9);
                         }
                     }
                     break;
