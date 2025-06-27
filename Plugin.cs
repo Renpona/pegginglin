@@ -116,7 +116,7 @@ namespace PeglinCore
                     break;
                 case Peg.PegType.CRIT:      // Yellow crit peg
                     Log.LogDebug("CRIT");
-                    RunVibrate(0.9);
+                    RunVibrate(0.8);
                     break;
                 case Peg.PegType.DULL:      // I think these are the gray pegs that don't pop on hit, from certain enemies
                     Log.LogDebug("DULL");
